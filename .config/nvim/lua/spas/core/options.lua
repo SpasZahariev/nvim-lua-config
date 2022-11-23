@@ -45,4 +45,4 @@ opt.smarttab = true
 opt.showmode = false
 
 -- more space for seeing messages
-opt.cmdheight = 2
+-- opt.cmdheight = 2

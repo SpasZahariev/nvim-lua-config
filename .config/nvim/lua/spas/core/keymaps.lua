@@ -4,17 +4,17 @@ local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
 
-keymap.set ("i", "<C-c>", "<ESC>")
+keymap.set("i", "<C-c>", "<ESC>")
 
-keymap.set ("n", "<CR>", ":nohl<CR>") -- removes highlights when I press enter
+keymap.set("n", "<CR>", ":nohl<CR>") -- removes highlights when I press enter
 
-
-keymap.set ("n", "x", '"_x') -- when I delete with x it wont override my register
-
+keymap.set("n", "x", '"_x') -- when I delete with x it wont override my register
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>|", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>-", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
@@ -48,7 +48,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
 
 -- delete word with ctrl+backspace in insert mode. Should be super normal but vim sees this weird ^H character
 keymap.set("i", "", "<c-w>")
