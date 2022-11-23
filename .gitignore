@@ -89,13 +89,13 @@ go/*
 .config/coc/*
 .config/configstore/*
 .config/dlv/*
-.config/f-sy-h/*
 .config/htop/*
 .config/neofetch/*
 .config/powerline/*
 .config/procps/*
 .config/wslu/*
-.config/zsh-syntax-highlighting/*
+.config/f-sy-h
+.config/zsh-syntax-highlighting
 
 
 
