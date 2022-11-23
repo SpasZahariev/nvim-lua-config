@@ -82,6 +82,7 @@ luac.out
 .zsh_env
 MyProjects
 go/*
+.tmux/*
 
 # my config folder
 # .config/alacritty/*
