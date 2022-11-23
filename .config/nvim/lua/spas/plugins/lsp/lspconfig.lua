@@ -63,7 +63,7 @@ lspconfig["html"].setup({
 })
 
 -- configure golang server
-lspconfig["gopls"].setup({
+lspconfig["golangci_lint_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
