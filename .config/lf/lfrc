@@ -1,0 +1,14 @@
+set icons true
+set smartcase true
+set incsearch true
+# show hidden files
+set hidden true
+
+
+# open file when I press enter
+map <enter> open
+map <esc> quit
+
+# set bat as the file previewer
+set previewer ~/.config/lf/pv.sh
+map i $LESSOPEN='| ~/.config/lf/pv.sh %s' less -R $f
