@@ -11,10 +11,17 @@ keymap.set("n", "<CR>", ":nohl<CR>") -- removes highlights when I press enter
 keymap.set("n", "x", '"_x') -- when I delete with x it wont override my register
 
 -- window management
+
+-- 3 keymaps for splitting vertically so I don't bother with shift
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>|", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>\\", "<C-w>v") -- split window vertically
+
+-- 3 keymaps for splitting horizontally
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>-", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>_", "<C-w>s") -- split window horizontally
+
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 

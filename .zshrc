@@ -217,5 +217,7 @@ alias rzsh='source ~/.zshrc && echo "Reloaded the .zshrc file ^_^"'
 # tmux attach to a session or create new one 
 alias ts='tmux new -ADs'
 
+# tmux kill the last session I was on
+alias tk='tmux kill-session'
 
 
