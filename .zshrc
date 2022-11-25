@@ -214,6 +214,12 @@ source "$HOME/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # reload the .zschrc
 alias rzsh='source ~/.zshrc && echo "Reloaded the .zshrc file ^_^"'
 
+# recognize normal vim command as nvim as well
+alias vim='nvim'
+
+# when using tmux make it work with my nvim colorschemes
+alias tmux='TERM=screen-256color-bce tmux'
+
 # tmux attach to a session or create new one 
 alias ts='tmux new -ADs'
 
