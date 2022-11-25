@@ -224,6 +224,6 @@ alias tmux='TERM=screen-256color-bce tmux'
 alias ts='tmux new -ADs'
 
 # tmux kill the last session I was on
-alias tk='tmux kill-session'
+alias tk='tmux kill-session -t'
 
 

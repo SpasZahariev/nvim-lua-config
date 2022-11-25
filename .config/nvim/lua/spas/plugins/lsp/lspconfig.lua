@@ -11,10 +11,10 @@ if not cmp_nvim_lsp_status then
 end
 
 -- import typescript plugin safely
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-	return
-end
+-- local typescript_setup, typescript = pcall(require, "typescript")
+-- if not typescript_setup then
+-- 	return
+-- end
 
 local keymap = vim.keymap -- for conciseness
 
@@ -68,13 +68,18 @@ lspconfig["golangci_lint_ls"].setup({
 	on_attach = on_attach,
 })
 
--- configure typescript server with plugin
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
+
+-- configure typescript server with plugin
+-- typescript.setup({
+-- 	server = {
+-- 		capabilities = capabilities,
+-- 		on_attach = on_attach,
+-- 	},
+-- })
 
 -- configure css server
 lspconfig["cssls"].setup({

@@ -83,6 +83,7 @@ luac.out
 MyProjects
 go/*
 .tmux/*
+coding/*
 
 # my config folder
 # .config/alacritty/*
