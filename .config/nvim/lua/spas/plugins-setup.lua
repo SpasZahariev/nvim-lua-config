@@ -101,6 +101,11 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- Debugger Adapter Protocol
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("leoluz/nvim-dap-go")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

@@ -4,8 +4,6 @@ local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
 
-keymap.set("i", "<C-c>", "<ESC>")
-
 keymap.set("n", "<CR>", ":nohl<CR>") -- removes highlights when I press enter
 
 keymap.set("n", "x", '"_x') -- when I delete with x it wont override my register

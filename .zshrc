@@ -146,8 +146,9 @@ PATH=/usr/lib/postgresql/12/lib:$PATH
 PATH=~/.local/bin:$PATH
 export PATH
 
-# Path to GO-lang bin
+# Paths to GO-lang bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 # enable zoxide for cd command on steroids!
 eval "$(zoxide init zsh)"
