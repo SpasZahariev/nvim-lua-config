@@ -58,3 +58,14 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- delete word with ctrl+backspace in insert mode. Should be super normal but vim sees this weird ^H character
 keymap.set("i", "", "<c-w>")
+
+-- try formatting the document
+-- keymap.set("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
+
+-- vim does not recognize the Alt character -> it basically appears as ^[
+
+-- Alt + l to format file
+keymap.set("n", "^[l", "<M-l>") -- workaround set Alt + L to trigger MetaKey + l. Metakey + l will trigger the formatting
+keymap.set("n", "<M-l>", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
+
+-- ^[l

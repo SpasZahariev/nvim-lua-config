@@ -46,3 +46,6 @@ opt.showmode = false
 
 -- more space for seeing messages
 -- opt.cmdheight = 2
+
+-- try formatting on save
+-- vim.cmd [autocmd BufWritePre *.go lua vim.lsp.buf.formatting()]
