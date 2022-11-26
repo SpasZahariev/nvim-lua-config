@@ -218,7 +218,7 @@ alias rzsh='source ~/.zshrc && echo "Reloaded the .zshrc file ^_^"'
 alias vim='nvim'
 
 # when using tmux make it work with my nvim colorschemes
-alias tmux='TERM=screen-256color-bce tmux'
+# alias tmux='TERM=screen-256color-bce tmux'
 
 # tmux attach to a session or create new one 
 alias ts='tmux new -ADs'

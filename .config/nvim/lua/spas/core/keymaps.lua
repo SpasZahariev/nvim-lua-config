@@ -30,6 +30,12 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
+-- move between windows since vim navigator does not work when tmux is on
+-- keymap.set("n", "<C-H>", "<C-w>h")
+-- keymap.set("n", "<C-J>", "<C-w>j")
+-- keymap.set("n", "<C-K>", "<C-w>k")
+-- keymap.set("n", "<C-L>", "<C-w>l")
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
