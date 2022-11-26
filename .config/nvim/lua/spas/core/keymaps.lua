@@ -74,4 +74,46 @@ keymap.set("i", "", "<c-w>")
 keymap.set("n", "^[l", "<M-l>") -- workaround set Alt + L to trigger MetaKey + l. Metakey + l will trigger the formatting
 keymap.set("n", "<M-l>", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
 
--- ^[l
+-- it already works but just to be explicit
+keymap.set("i", "<C-c>", "<Esc>")
+keymap.set("v", "<C-c>", "<Esc>")
+
+-- Primagen remaps:
+
+-- center the screen when I am moving to next and prev (also opens folds)
+keymap.set("n", "n", "nzzzv") -- center on pressing n
+keymap.set("n", "N", "Nzzzv") -- center on pressing N
+
+-- center screen when moving with C-d and C-u
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- will inline. Puts the next life of code at the end of my current line.
+keymap.set("n", "J", "mzJ`z") -- mzj`z is to keep the cursor in the same spot. By default the cursor moves
+
+keymap.set("n", "Y", "y$") -- make Y copy until the end of the line
+keymap.set("v", "Y", "y$") -- make Y copy until the end of the line
+
+-- move lines  up and down and tries to indent them correctly
+keymap.set("n", "<leader>j", ":m.+1<CR>==") -- moves the current line one line down
+keymap.set("n", "<leader>k", ":m.-2<CR>==") -- moves the current line one line above
+
+-- move SELECTION up and down and reformat it
+keymap.set("v", "<leader>j", ":m'>+1<CR>gv=gv") -- tries to move, reformat, reselect
+keymap.set("v", "<leader>k", ":m'>-2<CR>gv=gv") -- tries to move, reformat, reselect
+
+-- undo break points. For when I don't want to undo all my new text
+keymap.set("i", ",", ",<C-g>u")
+keymap.set("i", ".", ".<C-g>u")
+keymap.set("i", "!", "!<C-g>u")
+keymap.set("i", "?", "?<C-g>u")
+
+-- deletes the visual selection and pastes from my clipboard
+keymap.set("v", "<leader>p", '"_dP') -- the clipboard wont be overwritten with the deleted text
+
+-- indenting in visual mode stays in visual mode
+keymap.set("v", ">", ">gv")
+keymap.set("v", "<", "<gv")
+
+-- copy my selection and duplicate it underneath
+keymap.set("v", "<C-p>", "y'>o<Esc>p") -- also adds one space between the duplicates
