@@ -86,20 +86,20 @@ go/*
 coding/*
 
 # my config folder
-# .config/alacritty/*
-# .config/btop/*
-# .config/coc/*
-# .config/configstore/*
-# .config/dlv/*
-# .config/htop/*
-# .config/neofetch/*
-# .config/powerline/*
-# .config/procps/*
-# .config/wslu/*
-# .config/f-sy-h
-# .config/zsh-syntax-highlighting
+.config/alacritty/*
+.config/btop/*
+.config/coc/*
+.config/configstore/*
+.config/dlv/*
+.config/htop/*
+.config/neofetch/*
+.config/powerline/*
+.config/procps/*
+.config/wslu/*
+.config/f-sy-h
+.config/zsh-syntax-highlighting
 
-.config/
-!.config/nvim/*
-!.config/lf/*
+# .config/
+# !.config/nvim/*
+# !.config/lf/*
 
