@@ -40,3 +40,7 @@ end
 dap.listeners.after.event_exited["spas_key"] = function()
 	dapui.close()
 end
+
+-- configure icons for Debug signs
+vim.fn.sign_define("DapBreakpoint", { text = "💔", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "💩", texthl = "", linehl = "", numhl = "" })
