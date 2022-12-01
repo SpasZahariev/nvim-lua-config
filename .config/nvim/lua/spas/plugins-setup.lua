@@ -102,6 +102,15 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- for extract variable/extract method shortcut. Go go Prime!
+	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
+
 	-- Debugger Adapter Protocol
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
