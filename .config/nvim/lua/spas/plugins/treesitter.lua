@@ -10,6 +10,16 @@ treesitter.setup({
 	highlight = {
 		enable = true,
 	},
+	-- will allow me to select everything within a method or a class or etc
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<leader>af",
+			node_incremental = "<leader>af",
+			scope_incremental = "<c-s>",
+			node_decremental = "<c-backspace>",
+		},
+	},
 	-- enable indentation
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
