@@ -116,6 +116,8 @@ return packer.startup(function(use)
 	use("rcarriga/nvim-dap-ui")
 	use("leoluz/nvim-dap-go")
 
+	use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
