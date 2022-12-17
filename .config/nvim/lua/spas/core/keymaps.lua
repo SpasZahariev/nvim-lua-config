@@ -57,11 +57,22 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+vim.keymap.set("n", "<leader>/", function()
+	-- You can pass additional configuration to telescope to change theme, layout, etc.
+	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+		winblend = 10,
+		previewer = false,
+	}))
+end, { desc = "[/] Fuzzily search in current buffer]" })
+
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- delete word with ctrl+backspace in insert mode. Should be super normal but vim sees this weird ^H character
 keymap.set("i", "", "<c-w>")
+
+-- keymap.set("i", "<c-backspace>", "<c-w>")
+-- keymap.set("n", "<c-backspace>", "dw")
 
 -- try formatting the document
 -- keymap.set("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
